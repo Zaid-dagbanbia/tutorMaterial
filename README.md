@@ -4,3 +4,5 @@
 
 - the .js file contains the live coding part. sorry for day 1 is not structured well.
 -Javascript is fun let us all enjoy it.
+
+:
