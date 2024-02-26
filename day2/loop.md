@@ -131,13 +131,33 @@ for (let i = 0; i <= people.length; i++) {
 ## Nested loops
 
 ```javascript
-for (let i = 0; i < seatingChart.length; i++) {
+for (let i = 1; i <= 10; i++) {
+  console.log(`i is: ${i}`)
+ for(let j = 1; j < 4; j++){
+  console.log(`    j is : ${j}`)
+ }
+}
+```
+
+```javascript
+//example2
+const seatingChart = [
+  ['kristin','Erik','Namita'],
+  ['Geioffre','Yaw','james'],
+  ['Alluta','Sakura','Jack','Erika']
+]
+
+for(let i=0;i < seatingChart.length;i++){
   const row = seatingChart[i];
-  console.log(`ROW #${i + 1}`);
-  for (let j = 0; j < row.length; j++) {
-    console.log(row[j]);
+  console.log(`ROW ${i + 1}`)
+  for(let j= 0; j< row.length; j++){
+    console.log(row[j])
   }
 }
+
+
+
+
 ```
 
 ## While Loops
@@ -165,3 +185,36 @@ console.log("OK YOU WIN!")
 ![alt text](image-16.png)
 
 ![alt text](image-17.png)
+
+
+## Iterating over objects
+
+
+```javascript
+
+const testScores = {
+  keenan:80,
+  damon: 85,
+  jomana:90,
+  malon:72,
+  nadia:80
+}
+
+
+for (let person in testScores){
+  // console.log(person)
+
+  console.log(`${person} scored ${testScores[person]}`);
+}
+
+let total = 0;
+let scores = Object.values(testScores)
+for (let score of scores){
+  console.log(score);
+  total += score;
+}
+
+console.log(total / scores.length)
+
+
+```
